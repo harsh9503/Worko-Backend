@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema(
+  {
     email: {
       type: String,
       required: true,
@@ -27,10 +28,16 @@ const userSchema = new mongoose.Schema({
     password: {
       type: String,
       required: true,
-      minlength: [8, 'Password must be at least 6 characters long']
+      minlength: [8, 'Password must be at least 8 characters long']
+    },
+    accountType: {
+      type: String,
+      enum: ["Admin", "User"],
+      required: true
     }
-  });
-  
+  },
+  { timestamps: true }  
+);
 
 const User = mongoose.model('User', userSchema);
 
