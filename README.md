@@ -29,7 +29,6 @@ Make sure you have the following software installed on your local development ma
 
 Create a .env file in the root directory of the project and add the necessary environment variables. Here is an example .env file:
 
-    ```bash
     PORT=3000
     MONGODB_URI=mongodb://localhost:27017/worko
     JWT_SECRET=your_secret_key
@@ -38,7 +37,6 @@ Create a .env file in the root directory of the project and add the necessary en
 
 Start the development server:
 
-    ```bash
     npm start
 
 
